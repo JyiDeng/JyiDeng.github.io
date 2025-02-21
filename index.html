@@ -145,45 +145,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>​<br>本人环境：Windows 11，不使用docker，直接安装ollama；16GB RAM，无GPU。</p>
-<h1 id="1-ollama版本过低，deepseek回复为空，qwen无法chat"><a href="#1-ollama版本过低，deepseek回复为空，qwen无法chat" class="headerlink" title="1. ollama版本过低，deepseek回复为空，qwen无法chat"></a>1. ollama版本过低，deepseek回复为空，qwen无法chat</h1><blockquote>
-<p>正确安装ollama、正确拉取deepseek-r1:1.5b后，能够用ollama list找到有这个模型，也有chat提示语（<code>&gt;&gt;&gt;Send a message (/? for help)</code> ) ，但是和模型chat的过程中，<strong>deepseek的回复为空</strong>；<br>为了验证问题所在，正确拉取qwen2:0.5b，但是无法开始chat，报错：<strong>Error: llama runner process no longer running: 3221226505</strong></p>
-</blockquote>
-<p>解决方案：用 <code>ollama --version</code> 查询版本是0.1.x，结合以上两个问题来看，ollama版本太低了。灵感来自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/alalaal/article/details/140828463">使用ollama运行llama3.1遇到问题+手工升级ollama</a></p>
-<p>先卸载当前ollama，再回到官网下载更高版本的ollama（据2025年2月6日观察，0.5.x 好使）。具体如何安装，可以看以下第二点里的链接：</p>
-<h1 id="2-ollama改变-自定义安装路径"><a href="#2-ollama改变-自定义安装路径" class="headerlink" title="2. ollama改变&#x2F;自定义安装路径"></a>2. ollama改变&#x2F;自定义安装路径</h1><blockquote>
-<p>ollama的setup.exe运行的时候，是不能手动选择安装位置、model存放位置的。</p>
-</blockquote>
-<p>如果你已经安装完ollama，并且想改路径，方法一（不推荐）：安装完以后，<code>把整个ollama可执行文件所在的文件夹、整个models文件夹移动到想要的位置</code>，<code>并且修改相应的2个环境变量</code>。不推荐，是因为可能导致上面第一点的问题。具体操作方法，参考文章：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/youeyeb/article/details/144905333">在Windows中将Ollama安装到其他盘（例如D盘）的步骤如下_ollama安装到d盘-CSDN博客</a></p>
-<p>如果你还没安装ollama，方法二更好：直接在安装时修改路径，<code>OllamaSetup.exe /DIR=你想要安装的位置</code>，<code>并且修改相应的2个环境变量</code>。具体操作方法，参考文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LaiYun/p/18696931">自定义Ollama安装路径 - 不愿透露姓名的菜鸟 - 博客园</a> ；或者 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36975640/article/details/145443487">OLLAMA win11安装完整指南（安装时指定路径）</a></p>
-<p>备注：models默认目录为 <code>C:\Users%username%.ollama\models</code>，这个<code>.ollama</code>文件夹里的<code>server.log</code>可以用来排除错误，其中的内容和 <code>ollama serve</code>的一致，想要运行后者的命令，需要当前没有ollama正在运行，具体操作可以参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40280870/article/details/145275600">Windows安装与配置Ollama-CSDN博客</a></p>
-<h1 id="3-Error-pull-model-manifest-500-“errors”-“code”-”INTERNAL-ERROR”-”message”-”internal-error”"><a href="#3-Error-pull-model-manifest-500-“errors”-“code”-”INTERNAL-ERROR”-”message”-”internal-error”" class="headerlink" title="3. Error: pull model manifest: 500: {“errors”:[{“code”:”INTERNAL_ERROR”,”message”:”internal error”}]}"></a>3. Error: pull model manifest: 500: {“errors”:[{“code”:”INTERNAL_ERROR”,”message”:”internal error”}]}</h1><blockquote>
-<p>根据 <a target="_blank" rel="noopener" href="https://github.com/ollama/ollama/issues/8873">GitHub: pull model manifest: 500 #8873</a> ：北京时间2025年2月6日16:20左右开始，拉取不了新模型</p>
-</blockquote>
-<p>解决方案：等待ollama修复。<br>结果：17:30左右，可以正常pull了。</p>
-<p>（觉得速度很慢？本人使用魔法后，对于提速依然无效，只能硬等。。。）</p>
-<h1 id="4-在cmd使用ollama-run，无法显示的思路"><a href="#4-在cmd使用ollama-run，无法显示的思路" class="headerlink" title="4. 在cmd使用ollama run，无法显示&lt;think&gt;的思路"></a>4. 在cmd使用ollama run，无法显示&lt;think&gt;的思路</h1><blockquote>
-<p>&lt;think&gt;&lt;&#x2F;think&gt;中，内容为空；<br>问题回答太过简单，甚至有些不带脑子。</p>
-</blockquote>
-<p>可能原因：</p>
-<ul>
-<li>在cmd的默认路径（C:\Users\你的用户名）进行<code>ollama run 你的模型名字</code>，确实会导致它的回答不带脑子（我也很好奇为什么）。<ul>
-<li>解决方案1：换一个路径，譬如在cmd 输入 <code>cd Downloads</code> 即可。</li>
-<li>解决方案2：写程序调用。（js程序见下）</li>
-<li>解决方案3：使用Chatbox等工具调用。参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2492444">高效快速教你deepseek如何进行本地部署并且可视化对话</a></li>
-</ul>
-</li>
-<li>问题过于简单，譬如聊天中的第一句“你好”，确实没有思考过程。</li>
-<li>可能是版本过低，跳转第一点问题与解决。</li>
-</ul>
-<p>可参考的最简易版 javascript 程序：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;http://localhost:11434/api/generate&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">  <span class="attr">headers</span>: &#123; <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span> &#125;,</span><br><span class="line">  <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">model</span>: <span class="string">&quot;deepseek-r1:1.5b&quot;</span>,</span><br><span class="line">    <span class="attr">prompt</span>: <span class="string">&quot;如果一只橘子坚称它是一只猫，人工智能该怎么办？&quot;</span>,</span><br><span class="line">    <span class="attr">stream</span>: <span class="literal">false</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">json</span>())</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(data));</span><br></pre></td></tr></table></figure>
-
-<h1 id="其他各类deepseek信息传送门"><a href="#其他各类deepseek信息传送门" class="headerlink" title="其他各类deepseek信息传送门"></a>其他各类deepseek信息传送门</h1><p>ollama官网下载链接（访问网页不需要魔法，但下载需要）： <a target="_blank" rel="noopener" href="https://ollama.com/download">Download Ollama</a> ，或者GitHub下载链接：<a target="_blank" rel="noopener" href="https://github.com/ollama/ollama/releases">Releases · ollama&#x2F;ollama</a></p>
-<p>各个deepseek模型对应的电脑性能：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/21674080803">DeepSeek模型各版本硬件要求指南</a> ，以及（这篇不确定是不是AI撰写的）：<a target="_blank" rel="noopener" href="https://codingmall.com/knowledge-base/25-global/248276-deepseek">DeepSeek编码器可以在预算友好的设置上运行，还是需要高端硬件</a></p>
-<p>​ollama 相关命令：<a target="_blank" rel="noopener" href="https://www.runoob.com/ollama/ollama-commands.html">菜鸟教程-Ollama 相关命令</a></p>
-<p>Chatbox官网下载链接（访问网页不需要魔法，但下载需要）：<a target="_blank" rel="noopener" href="https://chatboxai.app/zh">Chatbox AI</a>，或者GitHub下载链接：<a target="_blank" rel="noopener" href="https://github.com/Bin-Huang/chatbox/releases">Releases · Bin-Huang&#x2F;chatbox</a></p>
-
+        <p>​1. ollama版本过低，deepseek回复为空，qwen无法chat<br>2. ollama改变&#x2F;自定义安装路径<br>3. Error: pull model manifest: 500: {“errors”:[{“code”:”INTERNAL_ERROR”,”message”:”internal error”}]}<br>4. 在cmd使用ollama run，无法显示&lt;think&gt;的思路<br>5. 其他各类deepseek信息传送门</p>
+        
+          <p class="article-more-link">
+            <a href="/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
