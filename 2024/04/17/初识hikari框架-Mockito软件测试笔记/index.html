@@ -6,21 +6,21 @@
   
   <title>初识hikari框架+Mockito软件测试笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="首次发表在：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_50132289&#x2F;article&#x2F;details&#x2F;137880658​ 一、hikari框架的各层次内容解释（导图）以前第一次见到类似的框架还是ruoyi框架。彼时的我还完全不明白这种文件结构，看到就怕。现在做了个思维导图小梳理，图中以我本次课程作业中的entity-Message为例，衍生出相关的controller、dao、">
+  <meta name="description" content="一、hikari框架的各层次内容解释（导图）二、会用到的测试：Mockito 的 MockMvc2.1. 正向思考简单的Mockito的测试怎么写2.2. 一个完整测试段落的例子2.3. when...thenReturn或者given...willReturn或者doNothing函数2.4. perform和andExpect函数：用来模拟http连接的2.5. verify函数：验证方法是否">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识hikari框架+Mockito软件测试笔记">
 <meta property="og:url" content="http://example.com/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首次发表在：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_50132289&#x2F;article&#x2F;details&#x2F;137880658​ 一、hikari框架的各层次内容解释（导图）以前第一次见到类似的框架还是ruoyi框架。彼时的我还完全不明白这种文件结构，看到就怕。现在做了个思维导图小梳理，图中以我本次课程作业中的entity-Message为例，衍生出相关的controller、dao、">
+<meta property="og:description" content="一、hikari框架的各层次内容解释（导图）二、会用到的测试：Mockito 的 MockMvc2.1. 正向思考简单的Mockito的测试怎么写2.2. 一个完整测试段落的例子2.3. when...thenReturn或者given...willReturn或者doNothing函数2.4. perform和andExpect函数：用来模拟http连接的2.5. verify函数：验证方法是否">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/3ab055a889c8eb78d12d3ea800d6f3a0.png">
+<meta property="og:image" content="http://example.com/pic%5C3ab055a889c8eb78d12d3ea800d6f3a0.png">
 <meta property="article:published_time" content="2024-04-17T09:52:41.000Z">
-<meta property="article:modified_time" content="2025-02-21T11:53:46.000Z">
+<meta property="article:modified_time" content="2025-02-21T12:05:20.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Mockito">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i-blog.csdnimg.cn/blog_migrate/3ab055a889c8eb78d12d3ea800d6f3a0.png">
+<meta name="twitter:image" content="http://example.com/pic%5C3ab055a889c8eb78d12d3ea800d6f3a0.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -99,22 +99,19 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>首次发表在：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50132289/article/details/137880658">https://blog.csdn.net/weixin_50132289/article/details/137880658</a><br>​</p>
+        <p>一、hikari框架的各层次内容解释（导图）<br>二、会用到的测试：Mockito 的 MockMvc<br>2.1. 正向思考简单的Mockito的测试怎么写<br>2.2. 一个完整测试段落的例子<br>2.3. <code>when...thenReturn</code>或者<code>given...willReturn</code>或者<code>doNothing</code>函数<br>2.4. <code>perform</code>和<code>andExpect</code>函数：用来模拟http连接的<br>2.5. <code>verify</code>函数：验证方法是否被调用过、调用过几次<br>2.6. json相关操作:<code>$[i]</code>的意思是第i个参数、<code>$</code>是数组<br>2.7. <code>perform....andExpect</code>里的<code>is3xxRedirection()</code></p>
+<span id="more"></span>
+
+<p>首次发表在：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_50132289/article/details/137880658">https://blog.csdn.net/weixin_50132289/article/details/137880658</a><br>​</p>
 <h1 id="一、hikari框架的各层次内容解释（导图）"><a href="#一、hikari框架的各层次内容解释（导图）" class="headerlink" title="一、hikari框架的各层次内容解释（导图）"></a>一、hikari框架的各层次内容解释（导图）</h1><p>以前第一次见到类似的框架还是ruoyi框架。彼时的我还完全不明白这种文件结构，看到就怕。现在做了个思维导图小梳理，图中以我本次课程作业中的entity-Message为例，衍生出相关的controller、dao、service。</p>
-<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/3ab055a889c8eb78d12d3ea800d6f3a0.png" alt="hikari框架层次梳理"></p>
+<p> <img src="/pic%5C3ab055a889c8eb78d12d3ea800d6f3a0.png" alt="hikari框架层次梳理"></p>
 <h1 id="二、会用到的测试：Mockito-的-MockMvc"><a href="#二、会用到的测试：Mockito-的-MockMvc" class="headerlink" title="二、会用到的测试：Mockito 的 MockMvc"></a>二、会用到的测试：Mockito 的 MockMvc</h1><p>对于其中的各个常用方法进行了梳理。<br>仅作示例作用，并没有深入解释其原理。<br>对我帮助很大的Mockito应用指南：<a target="_blank" rel="noopener" href="https://hezhiqiang8909.gitbook.io/java/docs/javalib/mockito">https://hezhiqiang8909.gitbook.io/java/docs/javalib/mockito</a></p>
 <h2 id="1-正向思考简单的Mockito的测试怎么写"><a href="#1-正向思考简单的Mockito的测试怎么写" class="headerlink" title="1. 正向思考简单的Mockito的测试怎么写"></a>1. 正向思考简单的Mockito的测试怎么写</h2><p>此处作为总结，本文后面有一些我遇到的例子。再次说明，仅作示例作用，并未深入解释原理。</p>
 <ol>
 <li>@ExtendWith、@WebMvcTest、@MockBean配置好</li>
 <li>@BeforeEach进行setup，初始化全局变量</li>
 <li>@Test每一个controller类里的方法，初始化局部变量，譬如一些列表、一些到Page的映射</li>
-<li>对模拟出来的变量<strong>配置返回值</strong>：<strong>given…willReturn 或 when…thenReturn</strong>（或 doNothing）。</li>
-</ol>
-<span id="more"></span>
-
-<pre><code>   · 具体语法：when(xxxService的函数(函数调用的参数...)).thenReturn(模拟出来的东西的返回值)
-</code></pre>
-<ol start="5">
+<li>对模拟出来的变量<strong>配置返回值</strong>：<strong>given…willReturn 或 when…thenReturn</strong>（或 doNothing）。<br> · 具体语法：when(xxxService的函数(函数调用的参数…)).thenReturn(模拟出来的东西的返回值)</li>
 <li>使用Mockito的 <strong>perform…andExpect</strong> 进行HTTP连接，测试连接是否200、相应属性是否正确、返回值如何；如有需要，测试能否redirect到下一个指定的网页。<br> · 具体语法：mockMvc.perform(get(网址).sessionAttrs或params).andExpect(status().isOk()).andExpect(view().name(xxx)).andExpect(model().attribute(expected,actual))</li>
 <li>使用Mockito的 <strong>verify</strong> 方法，对于属性和状态进行测试对于前述配置过的函数<strong>被调用的次数</strong>进行测试。<br> · 具体语法：verify(xxxService).xxxService刚才调用的函数(函数的参数)</li>
 <li>如果需要，如果被测试类里有 成功vs失败、不重复vs重复、登录与否、更改密码&#x2F;图片 等等的<strong>分类讨论，那么可以考虑写成多个测试类</strong></li>
@@ -161,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/" data-id="cm7eprx790001v45fe4q0459q" data-title="初识hikari框架+Mockito软件测试笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/" data-id="cm7eq8m0a0001zs5fb9vn85kh" data-title="初识hikari框架+Mockito软件测试笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
