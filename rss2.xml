@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JyiDeng的主页</title>
+    <link>http://JyiDeng.github.io/</link>
+    
+    <image>
+      <url>http://jyideng.github.io/icon.png</url>
+      <title>JyiDeng的主页</title>
+      <link>http://JyiDeng.github.io/</link>
+    </image>
+    
+    <atom:link href="http://jyideng.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>来自2022FDU软件工程。&lt;br&gt;喜欢美食！</description>
+    <pubDate>Sat, 22 Feb 2025 15:29:08 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>本地部署ollama+deepseek-r1排错攻略(ollama版本过低/自定义安装路径/不显示思路/500 INTERNAL_ERROR/其他常用链接传送门)</title>
+      <link>http://jyideng.github.io/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/</link>
+      <guid>http://jyideng.github.io/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/</guid>
+      <pubDate>Thu, 06 Feb 2025 10:06:01 GMT</pubDate>
+      
+      <description>&lt;p&gt;​1. ollama版本过低，deepseek回复为空，qwen无法chat&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ollama改变&amp;#x2F;自定义安装路径&lt;/li&gt;
+&lt;li&gt;Error: pull model manifest: 500: {“errors”:[{“code”:”INTERNAL_ERROR”,”message”:”internal error”}]}&lt;/li&gt;
+&lt;li&gt;在cmd使用ollama run，无法显示&amp;lt;think&amp;gt;的思路&lt;/li&gt;
+&lt;li&gt;其他各类deepseek信息传送门</description>
+      
+      
+      
+      
+      <category domain="http://JyiDeng.github.io/categories/Deepseek/">Deepseek</category>
+      
+      
+      <category domain="http://JyiDeng.github.io/tags/ollama/">ollama</category>
+      
+      <category domain="http://JyiDeng.github.io/tags/Deepseek/">Deepseek</category>
+      
+      <category domain="http://JyiDeng.github.io/tags/nlp/">nlp</category>
+      
+      
+      <comments>http://jyideng.github.io/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>make使用clang++报cstdlib.h等头文件找不到(ubuntu22.04)</title>
+      <link>http://jyideng.github.io/2024/11/13/make%E4%BD%BF%E7%94%A8clang-%E6%8A%A5cstdlib-h%E7%AD%89%E5%A4%B4%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0-ubuntu22-04/</link>
+      <guid>http://jyideng.github.io/2024/11/13/make%E4%BD%BF%E7%94%A8clang-%E6%8A%A5cstdlib-h%E7%AD%89%E5%A4%B4%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0-ubuntu22-04/</guid>
+      <pubDate>Wed, 13 Nov 2024 03:09:08 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;本人环境：Ubuntu22.04。出于项目要求，必须用clang++，不能用g++。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新clang++版本无用，更新llvm版本无用，在makefile添加 -I</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://JyiDeng.github.io/categories/%E7%BC%96%E8%AF%91-Compile/">编译 Compile</category>
+      
+      
+      <category domain="http://JyiDeng.github.io/tags/ubuntu/">ubuntu</category>
+      
+      <category domain="http://JyiDeng.github.io/tags/clang/">clang++</category>
+      
+      
+      <comments>http://jyideng.github.io/2024/11/13/make%E4%BD%BF%E7%94%A8clang-%E6%8A%A5cstdlib-h%E7%AD%89%E5%A4%B4%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0-ubuntu22-04/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>TodoList：记初次Vuex探索（本地+Codepen）（使用component）(版本：vue2, vuex3)</title>
+      <link>http://jyideng.github.io/2024/07/17/TodoList%EF%BC%9A%E8%AE%B0%E5%88%9D%E6%AC%A1Vuex%E6%8E%A2%E7%B4%A2%EF%BC%88%E6%9C%AC%E5%9C%B0-Codepen%EF%BC%89%EF%BC%88%E4%BD%BF%E7%94%A8component%EF%BC%89-%E7%89%88%E6%9C%AC%EF%BC%9Avue2-vuex3/</link>
+      <guid>http://jyideng.github.io/2024/07/17/TodoList%EF%BC%9A%E8%AE%B0%E5%88%9D%E6%AC%A1Vuex%E6%8E%A2%E7%B4%A2%EF%BC%88%E6%9C%AC%E5%9C%B0-Codepen%EF%BC%89%EF%BC%88%E4%BD%BF%E7%94%A8component%EF%BC%89-%E7%89%88%E6%9C%AC%EF%BC%9Avue2-vuex3/</guid>
+      <pubDate>Wed, 17 Jul 2024 10:07:20 GMT</pubDate>
+      
+      <description>&lt;p&gt;​&lt;br&gt;一、写在前面+效果图&lt;br&gt;二、Vuex&lt;br&gt;2.1 Codepen：html+js+css&lt;br&gt;2.1.1 一个可能更加通顺的思路&lt;br&gt;2.2 本地：App.vue，components&amp;#x2F;component1.vue，store&amp;#x2F;index.js&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://JyiDeng.github.io/categories/%E5%89%8D%E7%AB%AF-FrontEnd/">前端 FrontEnd</category>
+      
+      
+      <category domain="http://JyiDeng.github.io/tags/Vuex/">Vuex</category>
+      
+      
+      <comments>http://jyideng.github.io/2024/07/17/TodoList%EF%BC%9A%E8%AE%B0%E5%88%9D%E6%AC%A1Vuex%E6%8E%A2%E7%B4%A2%EF%BC%88%E6%9C%AC%E5%9C%B0-Codepen%EF%BC%89%EF%BC%88%E4%BD%BF%E7%94%A8component%EF%BC%89-%E7%89%88%E6%9C%AC%EF%BC%9Avue2-vuex3/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>初识hikari框架+Mockito软件测试笔记</title>
+      <link>http://jyideng.github.io/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/</link>
+      <guid>http://jyideng.github.io/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/</guid>
+      <pubDate>Wed, 17 Apr 2024 09:52:41 GMT</pubDate>
+      
+      <description>&lt;p&gt;一、hikari框架的各层次内容解释（导图）&lt;br&gt;二、会用到的测试：Mockito 的 MockMvc&lt;br&gt;2.1. 正向思考简单的Mockito的测试怎么写&lt;br&gt;2.2. 一个完整测试段落的例子&lt;br&gt;2.3. &lt;code&gt;when...thenReturn&lt;/code&gt;或者&lt;code&gt;given...willReturn&lt;/code&gt;或者&lt;code&gt;doNothing&lt;/code&gt;函数&lt;br&gt;2.4. &lt;code&gt;perform&lt;/code&gt;和&lt;code&gt;andExpect&lt;/code&gt;函数：用来模拟http连接的&lt;br&gt;2.5. &lt;code&gt;verify&lt;/code&gt;函数：验证方法是否被调用过、调用过几次&lt;br&gt;2.6. json相关操作:&lt;code&gt;$[i]&lt;/code&gt;的意思是第i个参数、&lt;code&gt;$&lt;/code&gt;是数组&lt;br&gt;2.7. &lt;code&gt;perform....andExpect&lt;/code&gt;里的&lt;code&gt;is3xxRedirection()&lt;/code&gt;&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://JyiDeng.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95-Software-Testing/">软件测试 Software Testing</category>
+      
+      
+      <category domain="http://JyiDeng.github.io/tags/Mockito/">Mockito</category>
+      
+      <category domain="http://JyiDeng.github.io/tags/Java/">Java</category>
+      
+      
+      <comments>http://jyideng.github.io/2024/04/17/%E5%88%9D%E8%AF%86hikari%E6%A1%86%E6%9E%B6-Mockito%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
