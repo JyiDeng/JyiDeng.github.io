@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)</title>
+      <link href="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/"/>
+      <url>/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/JyiDeng/Sunshine-Your-Desktop-Pinned-Motto-and-Pic-Widget-on-Windows">写了一个新的 Windows 桌面插件！欢迎来 github 使用！（点击我）</a></p><p>🌞<strong>Sunshine 小太阳</strong> 的灵感来源于作者阴雨天时心情不佳，希望用阳光为用户带来温暖。基于 Windows ， Sunshine 可以展示自定义的格言、图片，可以切换喜欢的主题，运行也非常简单。</p><p>Sunshine was inspired by the author’s bad mood on rainy days, hoping to bring warmth to users. Based on Windows, Sunshine can display customized mottos and pics, switch favorite themes, and is easy to run.</p><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul><li>📌<strong>Inspirational Display</strong>: 置顶展示多句提醒自己的格言，并配上一张图片。Presents multiple self - reminding mottos accompanied by an image, all <strong>pinned</strong> on the top of all windows.</li><li>🎨<strong>Customizable Settings</strong>: 可以切换主题、调整窗口大小、设置格言刷新频率等。Allows you to switch themes, adjust the window size, and set the refresh frequency of mottos. </li><li>☁️<strong>Lightweight Design</strong>: 特别轻量级。Sunshine is extremely lightweight.</li></ul><h3 id="Sunshine-双语效果图-Sunshine-Screenshot-（Both-in-Chinese-and-English）"><a href="#Sunshine-双语效果图-Sunshine-Screenshot-（Both-in-Chinese-and-English）" class="headerlink" title="Sunshine 双语效果图 Sunshine Screenshot （Both in Chinese and English）"></a>Sunshine 双语效果图 Sunshine Screenshot （Both in Chinese and English）</h3><p><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/Sunshine.png" alt="Sunshine 效果图"></p><p><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/Sunshine_en.png" alt="Sunshine 效果图-en"></p><h3 id="双语配置效果图-Config-Screenshot-（Both-in-Chinese-and-English）"><a href="#双语配置效果图-Config-Screenshot-（Both-in-Chinese-and-English）" class="headerlink" title="双语配置效果图 Config Screenshot （Both in Chinese and English）"></a>双语配置效果图 Config Screenshot （Both in Chinese and English）</h3><p><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/config.png" alt="Config 效果图"> </p><p><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/config_en.png" alt="Config 效果图-en"> </p><h2 id="安装与运行-Install-Run"><a href="#安装与运行-Install-Run" class="headerlink" title="安装与运行 Install &amp; Run"></a>安装与运行 Install &amp; Run</h2><ol><li>下载 Download：克隆仓库，或下载zip：<code>git clone git@github.com:JyiDeng/Sunshine.git</code></li><li>安装 Install：使用<code>requirements.txt</code>安装需要的库：<code>pip install -r requirements.txt</code></li><li>配置 Config：在<code>config.json</code>中，配置想要的格言。 In the <code>config.json</code> file, configure the mottos you desire. </li><li>运行 Run：<code>python Sunshine.py</code>，并在<code>设置/Settings</code>按钮中配置具体的图片、色彩、大小等。 Run the program by <code>python Sunshine.py</code>. After that, in the <code>设置/Settings</code> button, you can configure specific elements such as images, colors, and size.</li><li>拖拽 Drag：按住图片部分进行拖拽。 Drag on the image part.</li></ol><h2 id="致谢-Acknowledgement"><a href="#致谢-Acknowledgement" class="headerlink" title="致谢 Acknowledgement"></a>致谢 Acknowledgement</h2><p>让我们说谢谢糯米（你可以在<code>pic/</code>中发现它的照片作为示例）：Let us thank Nuomi (You can find its photos in <code>pic/</code>):</p><p><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/cat.jpg" alt="糯米-竖"><br><img src="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/cat2.jpg" alt="糯米-横"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Widget 插件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>本地部署ollama+deepseek-r1排错攻略(ollama版本过低/自定义安装路径/不显示思路/500 INTERNAL_ERROR/其他常用链接传送门)</title>
       <link href="/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/"/>
       <url>/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/</url>

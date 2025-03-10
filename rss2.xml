@@ -15,8 +15,35 @@
     <atom:link href="http://jyideng.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>来自2022FDU软件工程。&lt;br&gt;喜欢美食！</description>
-    <pubDate>Sat, 22 Feb 2025 15:29:08 GMT</pubDate>
+    <pubDate>Mon, 10 Mar 2025 11:37:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)</title>
+      <link>http://jyideng.github.io/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/</link>
+      <guid>http://jyideng.github.io/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/</guid>
+      <pubDate>Mon, 10 Mar 2025 11:35:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/JyiDeng/Sunshine-Your-Desktop-Pinned-Motto-and-Pic-Widget-on-Windows&quot;&gt;写了一个新的 Windows 桌面插件！欢迎来 github</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://JyiDeng.github.io/categories/Widget-%E6%8F%92%E4%BB%B6/">Widget 插件</category>
+      
+      
+      <category domain="http://JyiDeng.github.io/tags/Python/">Python</category>
+      
+      
+      <comments>http://jyideng.github.io/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>本地部署ollama+deepseek-r1排错攻略(ollama版本过低/自定义安装路径/不显示思路/500 INTERNAL_ERROR/其他常用链接传送门)</title>
