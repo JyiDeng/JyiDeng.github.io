@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手 | JyiDeng的主页</title><meta name="author" content="JyiDeng"><meta name="copyright" content="JyiDeng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写了一个新的 QQ 聊天记录AI总结助手！欢迎来 github 使用！（点击我加Star） 🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手QQ Summary Genius ，一个简单而强大的QQ聊天AI总结工具，帮你提炼有价值的讨论内容。 🌟 主要功能 数据预处理部分 📅 根据日期范围筛选内容 🗑️ 移除日期时间行、QQ号、昵称等信息 🖼️ 移除[图片]标记和其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手">
+<meta property="og:url" content="http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/index.html">
+<meta property="og:site_name" content="JyiDeng的主页">
+<meta property="og:description" content="写了一个新的 QQ 聊天记录AI总结助手！欢迎来 github 使用！（点击我加Star） 🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手QQ Summary Genius ，一个简单而强大的QQ聊天AI总结工具，帮你提炼有价值的讨论内容。 🌟 主要功能 数据预处理部分 📅 根据日期范围筛选内容 🗑️ 移除日期时间行、QQ号、昵称等信息 🖼️ 移除[图片]标记和其">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://jyideng.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2025-03-18T08:52:17.000Z">
+<meta property="article:modified_time" content="2025-03-18T09:24:15.013Z">
+<meta property="article:author" content="JyiDeng">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jyideng.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手",
+  "url": "http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/",
+  "image": "http://jyideng.github.io/img/avatar.jpg",
+  "datePublished": "2025-03-18T08:52:17.000Z",
+  "dateModified": "2025-03-18T09:24:15.013Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "JyiDeng",
+      "url": "http://jyideng.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="canonical" href="http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="JyiDeng的主页" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="JyiDeng的主页" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 博文</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/background.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">JyiDeng的主页</span></a><a class="nav-page-title" href="/"><span class="site-name">🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 博文</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-18T08:52:17.000Z" title="发表于 2025-03-18 16:52:17">2025-03-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-18T09:24:15.013Z" title="更新于 2025-03-18 17:24:15">2025-03-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Widget-Tools-%E6%8F%92%E4%BB%B6-%E5%B7%A5%E5%85%B7/">Widget/Tools 插件/工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://github.com/JyiDeng/QQ-Summary-Genius">写了一个新的 QQ 聊天记录AI总结助手！欢迎来 github 使用！（点击我加Star）</a></p>
+<h1 id="🧹-QQ-Summary-Genius-QQ聊天文字记录AI总结助手"><a href="#🧹-QQ-Summary-Genius-QQ聊天文字记录AI总结助手" class="headerlink" title="🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手"></a>🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手</h1><p>QQ Summary Genius ，一个简单而强大的QQ聊天AI总结工具，帮你提炼有价值的讨论内容。</p>
+<h2 id="🌟-主要功能"><a href="#🌟-主要功能" class="headerlink" title="🌟 主要功能"></a>🌟 主要功能</h2><ul>
+<li>数据预处理部分<ul>
+<li>📅 根据日期范围筛选内容</li>
+<li>🗑️ 移除日期时间行、QQ号、昵称等信息</li>
+<li>🖼️ 移除[图片]标记和其他表情符号</li>
+<li>⚙️ 移除系统消息和无用重复消息，支持自定义过滤关键词<!-- - 📊 提供详细的处理统计信息 --></li>
+</ul>
+</li>
+<li>AI 总结部分<ul>
+<li>🤖 支持调用多种 AI API（SiliconFlow、OpenAI、Anthropic）进行内容总结</li>
+<li>📊 生成Markdown格式的总结报告<!-- - ⚡ 使用多线程并行调用多个API提高效率 --></li>
+<li>🔑 便捷的 API 密钥、模型、提示词配置系统，支持交互式设置</li>
+<li>🔒 结果留于本地，安全性高</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+<h2 id="📁-目录结构"><a href="#📁-目录结构" class="headerlink" title="📁 目录结构"></a>📁 目录结构</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── process_chat_logs.py  # 聊天记录清理主程序</span><br><span class="line">├── generate_conclusion.py # AI总结功能主程序</span><br><span class="line">├── api_config.py         # API配置管理工具</span><br><span class="line">├── setup.py              # 环境配置与初始化脚本</span><br><span class="line">├── api_keys.ini          # API密钥配置文件(通过 setup.py 自动生成)</span><br><span class="line">├── filter_keywords.txt   # 过滤规则配置文件</span><br><span class="line">├── inputs/               # 输入文件目录</span><br><span class="line">├── outputs/              # 清理后的输出文件目录</span><br><span class="line">└── conclusion/           # AI总结生成的文件目录</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p>示例文件位于 <code>inputs/</code>、<code>outputs/</code>、<code>conclusion/</code>中。</p>
+<h2 id="🚀-快速开始"><a href="#🚀-快速开始" class="headerlink" title="🚀 快速开始"></a>🚀 快速开始</h2><ol>
+<li><p>克隆仓库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/JyiDeng/QQ-Summary-Genius.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行初始化脚本（推荐）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python setup.py</span><br></pre></td></tr></table></figure>
+<p>这将自动创建所需目录、安装依赖，并引导你配置 API 密钥、系统提示词。</p>
+</li>
+</ol>
+<p>或者，你也可以手动完成这些步骤：</p>
+<ol start="3">
+<li><p>准备聊天记录：</p>
+<ul>
+<li>将QQ聊天记录文件放入 <code>inputs</code> 目录<ul>
+<li>聊天记录导出：可以使用怀旧版QQ（官网下载，不带NT架构字样，可参考<a target="_blank" rel="noopener" href="https://dldir1.qq.com/qqfile/qq/PCQQ9.7.23/QQ9.7.23.29400.exe">(https://dldir1.qq.com/qqfile/qq/PCQQ9.7.23/QQ9.7.23.29400.exe)</a> ），右键单击群聊，点击<code>查看消息记录</code>，进入<code>消息管理器</code>，右键单击某个群聊，点击<code>导出消息记录</code>; </li>
+<li>选择<code>txt</code>文件格式，导出文件到<code>./inputs</code>文件夹<!-- - 确保文件使用 UTF-8 编码 --></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>运行聊天记录清理程序：（具体参数配置见后文）</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python process_chat_logs.py</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>配置 AI API 密钥：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python api_config.py</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python generate_conclusion.py -c</span><br></pre></td></tr></table></figure>
+
+<p>或者，打开<code>J:\Project_Playground\qq_chat_ai_conclusion\api_keys.ini</code>，设置 API。</p>
+<ol start="6">
+<li>选择模型：</li>
+</ol>
+<p>打开<code>J:\Project_Playground\qq_chat_ai_conclusion\api_keys.ini</code>，设置对应 API 的模型。</p>
+<ol start="7">
+<li>运行AI总结程序：（具体参数配置见后文）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python generate_conclusion.py</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>预处理后的文件将保存在 <code>outputs</code> 目录，文件名格式为：<code>cleaned_原文件名_日期范围.txt</code><br>总结文件将保存在 <code>conclusion</code> 目录，文件名格式为：<code>conclusion_原文件名_日期范围.md</code></p>
+<h2 id="📖-详细使用说明"><a href="#📖-详细使用说明" class="headerlink" title="📖 详细使用说明"></a>📖 详细使用说明</h2><h3 id="Step-1-聊天记录清理-命令行参数"><a href="#Step-1-聊天记录清理-命令行参数" class="headerlink" title="Step 1. 聊天记录清理 - 命令行参数"></a>Step 1. 聊天记录清理 - 命令行参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-f, --file</code></td>
+<td>指定要处理的文件</td>
+<td><code>-f &quot;chat.txt&quot;</code></td>
+</tr>
+<tr>
+<td><code>-o, --output</code></td>
+<td>指定输出文件路径</td>
+<td><code>-o &quot;output/result.txt&quot;</code></td>
+</tr>
+<tr>
+<td><code>-d, --directory</code></td>
+<td>处理指定目录下的所有文件</td>
+<td><code>-d &quot;inputs&quot;</code></td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>显示详细处理信息</td>
+<td><code>-v</code></td>
+</tr>
+<tr>
+<td><code>-k, --keywords</code></td>
+<td>指定过滤关键词配置文件</td>
+<td><code>-k &quot;filter_keywords.txt&quot;</code></td>
+</tr>
+<tr>
+<td><code>-t, --date</code></td>
+<td>指定日期范围</td>
+<td><code>-t &quot;2025-03-18&quot;</code></td>
+</tr>
+</tbody></table>
+<h4 id="基本用例"><a href="#基本用例" class="headerlink" title="基本用例"></a>基本用例</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 处理 inputs 目录下的所有文件，参数均采取默认值</span></span><br><span class="line">python process_chat_logs.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理单个文件</span></span><br><span class="line">python process_chat_logs.py -f <span class="string">&quot;inputs/example.txt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示详细处理信息</span></span><br><span class="line">python process_chat_logs.py -v</span><br></pre></td></tr></table></figure>
+
+<h4 id="日期筛选示例"><a href="#日期筛选示例" class="headerlink" title="日期筛选示例"></a>日期筛选示例</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 筛选指定日期的内容</span></span><br><span class="line">python process_chat_logs.py -t <span class="string">&quot;2025-03-18&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 筛选日期范围的内容</span></span><br><span class="line">python process_chat_logs.py -t <span class="string">&quot;2025-03-16=2025-03-18&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 组合使用参数</span></span><br><span class="line">python process_chat_logs.py -f <span class="string">&quot;example.txt&quot;</span> -t <span class="string">&quot;2025-03-18&quot;</span> -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-2-AI-总结-命令行参数"><a href="#Step-2-AI-总结-命令行参数" class="headerlink" title="Step 2. AI 总结 - 命令行参数"></a>Step 2. AI 总结 - 命令行参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-f, --file</code></td>
+<td>指定要总结的文件</td>
+<td><code>-f &quot;outputs/cleaned_example.txt&quot;</code></td>
+</tr>
+<tr>
+<td><code>-d, --input-dir</code></td>
+<td>指定要处理的文件目录，默认为outputs</td>
+<td><code>-d &quot;outputs&quot;</code></td>
+</tr>
+<tr>
+<td><code>-o, --output-dir</code></td>
+<td>指定总结文件输出目录，默认为conclusion</td>
+<td><code>-o &quot;conclusion&quot;</code></td>
+</tr>
+<tr>
+<td><code>-a, --api</code></td>
+<td>指定要使用的API源，可多选，默认为siliconflow</td>
+<td><code>-a siliconflow openai anthropic</code></td>
+</tr>
+<tr>
+<td><code>-p, --prompt</code></td>
+<td>自定义提示词</td>
+<td><code>-p &quot;请总结以下内容的主要话题：&quot;</code></td>
+</tr>
+<tr>
+<td><code>-c, --config</code></td>
+<td>配置API密钥</td>
+<td><code>-c</code></td>
+</tr>
+<tr>
+<td><code>-m, --model</code></td>
+<td>指定要使用的SiliconFlow模型名称</td>
+<td><code>-m &quot;qwen/Qwen2.5-7B-Chat&quot;</code></td>
+</tr>
+<tr>
+<td><code>-s, --system-prompt</code></td>
+<td>设置系统提示词</td>
+<td><code>-s &quot;你是一个专业的会议纪要整理专家&quot;</code></td>
+</tr>
+</tbody></table>
+<h4 id="系统提示词配置"><a href="#系统提示词配置" class="headerlink" title="系统提示词配置"></a>系统提示词配置</h4><p>程序使用的默认系统提示词为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">你是一个专业的聊天内容分析助手。你的任务是对QQ聊天记录进行简明扼要的总结，提取主要话题和关键信息。格式上，按照时间顺序划分小标题，总结各个话题主要内容。</span><br></pre></td></tr></table></figure>
+
+<p>你可以通过以下两种方式自定义系统提示词：</p>
+<ol>
+<li><p><strong>使用setup.py配置（推荐）</strong>：<br>运行 <code>python setup.py</code> 并按照提示修改系统提示词。</p>
+</li>
+<li><p><strong>直接编辑文件</strong>：<br>修改 <code>generate_conclusion.py</code> 文件中的 <code>SYSTEM_PROMPT</code> 常量。</p>
+</li>
+</ol>
+<h4 id="基本用例-1"><a href="#基本用例-1" class="headerlink" title="基本用例"></a>基本用例</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用默认API源(SiliconFlow)处理outputs目录下的所有文件</span></span><br><span class="line">python generate_conclusion.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理单个文件</span></span><br><span class="line">python generate_conclusion.py -f <span class="string">&quot;outputs/cleaned_example.txt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用多个API源进行总结</span></span><br><span class="line">python generate_conclusion.py -a siliconflow openai anthropic</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义提示词</span></span><br><span class="line">python generate_conclusion.py -p <span class="string">&quot;请分析并总结以下聊天内容的核心观点：&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定使用的模型</span></span><br><span class="line">python generate_conclusion.py -m <span class="string">&quot;qwen/Qwen2.5-72B-Chat&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="API-配置说明"><a href="#API-配置说明" class="headerlink" title="API 配置说明"></a>API 配置说明</h4><p>程序提供了两种方式配置API密钥：</p>
+<ol>
+<li><p><strong>交互式配置（推荐）</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python generate_conclusion.py -c</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python api_config.py</span><br></pre></td></tr></table></figure>
+<p>这将启动交互式配置向导，引导你输入各个API的密钥。</p>
+</li>
+<li><p><strong>手动编辑配置文件</strong>：<br>配置文件保存在 <code>api_keys.ini</code>，你可以直接编辑此文件设置密钥：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[siliconflow]</span></span><br><span class="line"><span class="attr">api_key</span> = your_api_key_here</span><br><span class="line"><span class="attr">api_url</span> = https://api.siliconflow.cn/v1/chat/completions</span><br><span class="line"><span class="attr">model</span> = deepseek-ai/DeepSeek-R1-Distill-Qwen-<span class="number">7</span>B</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">[openai]</span></span><br><span class="line"><span class="attr">api_key</span> = your_api_key_here</span><br><span class="line"><span class="attr">api_url</span> = https://api.openai.com/v1/chat/completions</span><br><span class="line"><span class="attr">model</span> = gpt-<span class="number">3.5</span>-turbo</span><br><span class="line"></span><br><span class="line"><span class="section">[anthropic]</span></span><br><span class="line"><span class="attr">api_key</span> = your_api_key_here</span><br><span class="line"><span class="attr">api_url</span> = https://api.anthropic.com/v1/messages</span><br><span class="line"><span class="attr">model</span> = claude-<span class="number">3</span>-sonnet-<span class="number">20240229</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="模型选择-以-SiliconFlow-为例"><a href="#模型选择-以-SiliconFlow-为例" class="headerlink" title="模型选择 - 以 SiliconFlow 为例"></a>模型选择 - 以 SiliconFlow 为例</h4><p>以 SiliconFlow 平台为例，它提供了多种可用模型，我们在此需要选择：</p>
+<ul>
+<li><strong>DeepSeek</strong>：<code>Pro/deepseek-ai/DeepSeek-R1</code>、<code>deepseek-ai/DeepSeek-R1-Distill-Qwen-7B</code>（默认使用的模型）等</li>
+<li><strong>Qwen</strong>：<code>Qwen/Qwen2.5-72B-Instruct-128K</code>、<code>Qwen/Qwen2.5-Coder-7B-Instruct</code>等</li>
+<li><strong>internlm</strong>：<code>internlm/internlm2_5-7b-chat</code>、<code>internlm/internlm2_5-20b-chat</code>等</li>
+<li><strong>BAAI</strong>：<code>BAAI/bge-large-zh-v1.5</code>等</li>
+<li><strong>THUDM</strong>：<code>THUDM/glm-4-9b-chat</code>等</li>
+<li>…(其他模型)</li>
+</ul>
+<p>你可以通过以下方式指定模型：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># A. 使用命令行参数指定</span></span><br><span class="line">python generate_conclusion.py -m <span class="string">&quot;Qwen/Qwen2.5-Coder-7B-Instruct&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># B. 在api_keys.ini文件中修改model字段</span></span><br></pre></td></tr></table></figure>
+<p>或在<code>api_keys.ini</code>文件中修改model字段。</p>
+<p>如果报错为模型不存在，可能是以上模型过期，请查阅SiliconFlow官方文档获取最新的模型列表。</p>
+<h3 id="⚙️-自定义过滤规则"><a href="#⚙️-自定义过滤规则" class="headerlink" title="⚙️ 自定义过滤规则"></a>⚙️ 自定义过滤规则</h3><p>在 <code>filter_keywords.txt</code> 中添加过滤规则，每行一个：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 普通文本</span><br><span class="line">Q群管家</span><br><span class="line">[图片]</span><br><span class="line"></span><br><span class="line"># 正则表达式（以 \ 开头）</span><br><span class="line">\[表情\]</span><br><span class="line">\[流泪\].*</span><br></pre></td></tr></table></figure>
+
+<p>等等。</p>
+<h2 id="🤝-贡献"><a href="#🤝-贡献" class="headerlink" title="🤝 贡献"></a>🤝 贡献</h2><p>欢迎提交 Issue 和 Pull Request 来帮助改进这个工具！</p>
+<h2 id="📄-许可证"><a href="#📄-许可证" class="headerlink" title="📄 许可证"></a>📄 许可证</h2><p>MIT License - 详见 <a target="_blank" rel="noopener" href="https://github.com/JyiDeng/QQ-Summary-Genius/blob/master/LICENSE">LICENSE</a> 文件</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://JyiDeng.github.io">JyiDeng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/">http://jyideng.github.io/2025/03/18/QQ Summary Genius QQ聊天文字记录AI总结助手/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://JyiDeng.github.io" target="_blank">JyiDeng的主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/" title="Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Sunshine🌞小太阳 - Your Desktop Pinned Motto & Pic Widget (Windows)</div></div><div class="info-2"><div class="info-item-1">写了一个新的 Windows 桌面插件！欢迎来 github 使用！（点击我加Star） 🌞Sunshine 小太阳 的灵感来源于作者阴雨天时心情不佳，希望用阳光为用户带来温暖。基于 Windows ， Sunshine 可以展示自定义的格言、图片，可以切换喜欢的主题，运行也非常简单。 Sunshine was inspired by the author’s bad mood on rainy days, hoping to bring warmth to users. Based on Windows, Sunshine can display customized mottos and pics, switch favorite themes, and is easy to run. Features 📌Inspirational Display: 置顶展示多句提醒自己的格言，并配上一张图片。Presents multiple self - reminding mottos accompanied by an image, all pinned on the top...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&%20Pic%20(Windows)/" title="Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-10</div><div class="info-item-2">Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)</div></div><div class="info-2"><div class="info-item-1">写了一个新的 Windows 桌面插件！欢迎来 github 使用！（点击我加Star） 🌞Sunshine 小太阳 的灵感来源于作者阴雨天时心情不佳，希望用阳光为用户带来温暖。基于 Windows ， Sunshine 可以展示自定义的格言、图片，可以切换喜欢的主题，运行也非常简单。 Sunshine was inspired by the author’s bad mood on rainy days, hoping to bring warmth to users. Based on Windows, Sunshine can display customized mottos and pics, switch favorite themes, and is easy to run. Features 📌Inspirational Display: 置顶展示多句提醒自己的格言，并配上一张图片。Presents multiple self - reminding mottos accompanied by an image, all pinned on the top...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">JyiDeng</div><div class="author-info-description">来自2022FDU软件工程。<br>喜欢美食！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JyiDeng"><i class="fab fa-github"></i><span>Follow me on Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/JyiDeng" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_50132289" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到JyiDeng的博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%A7%B9-QQ-Summary-Genius-QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B"><span class="toc-number">1.</span> <span class="toc-text">🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8C%9F-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text">🌟 主要功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%81-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">📁 目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9A%80-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-number">1.4.</span> <span class="toc-text">🚀 快速开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%96-%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">1.5.</span> <span class="toc-text">📖 详细使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%B8%85%E7%90%86-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">Step 1. 聊天记录清理 - 命令行参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E4%BE%8B"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">基本用例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E7%AD%9B%E9%80%89%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">日期筛选示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-AI-%E6%80%BB%E7%BB%93-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-number">1.5.2.</span> <span class="toc-text">Step 2. AI 总结 - 命令行参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E9%85%8D%E7%BD%AE"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">系统提示词配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E4%BE%8B-1"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">基本用例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API-%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E"><span class="toc-number">1.5.2.3.</span> <span class="toc-text">API 配置说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9-%E4%BB%A5-SiliconFlow-%E4%B8%BA%E4%BE%8B"><span class="toc-number">1.5.2.4.</span> <span class="toc-text">模型选择 - 以 SiliconFlow 为例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99"><span class="toc-number">1.5.3.</span> <span class="toc-text">⚙️ 自定义过滤规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A4%9D-%E8%B4%A1%E7%8C%AE"><span class="toc-number">1.6.</span> <span class="toc-text">🤝 贡献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%84-%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-number">1.7.</span> <span class="toc-text">📄 许可证</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/" title="🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手">🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手</a><time datetime="2025-03-18T08:52:17.000Z" title="发表于 2025-03-18 16:52:17">2025-03-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/" title="Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)">Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)</a><time datetime="2025-03-10T11:35:00.000Z" title="发表于 2025-03-10 19:35:00">2025-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/06/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2ollama-deepseek-r1%E6%8E%92%E9%94%99%E6%94%BB%E7%95%A5-ollama%E7%89%88%E6%9C%AC%E8%BF%87%E4%BD%8E-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84-%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%80%9D%E8%B7%AF-500-INTERNAL-ERROR-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5%E4%BC%A0%E9%80%81%E9%97%A8/" title="本地部署ollama+deepseek-r1排错攻略(ollama版本过低/自定义安装路径/不显示思路/500 INTERNAL_ERROR/其他常用链接传送门)">本地部署ollama+deepseek-r1排错攻略(ollama版本过低/自定义安装路径/不显示思路/500 INTERNAL_ERROR/其他常用链接传送门)</a><time datetime="2025-02-06T10:06:01.000Z" title="发表于 2025-02-06 18:06:01">2025-02-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/13/make%E4%BD%BF%E7%94%A8clang-%E6%8A%A5cstdlib-h%E7%AD%89%E5%A4%B4%E6%96%87%E4%BB%B6%E6%89%BE%E4%B8%8D%E5%88%B0-ubuntu22-04/" title="make使用clang++报cstdlib.h等头文件找不到(ubuntu22.04)">make使用clang++报cstdlib.h等头文件找不到(ubuntu22.04)</a><time datetime="2024-11-13T03:09:08.000Z" title="发表于 2024-11-13 11:09:08">2024-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/17/TodoList%EF%BC%9A%E8%AE%B0%E5%88%9D%E6%AC%A1Vuex%E6%8E%A2%E7%B4%A2%EF%BC%88%E6%9C%AC%E5%9C%B0-Codepen%EF%BC%89%EF%BC%88%E4%BD%BF%E7%94%A8component%EF%BC%89-%E7%89%88%E6%9C%AC%EF%BC%9Avue2-vuex3/" title="TodoList：记初次Vuex探索（本地+Codepen）（使用component）(版本：vue2, vuex3)">TodoList：记初次Vuex探索（本地+Codepen）（使用component）(版本：vue2, vuex3)</a><time datetime="2024-07-17T10:07:20.000Z" title="发表于 2024-07-17 18:07:20">2024-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By JyiDeng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="富强,民主,文明,和谐,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

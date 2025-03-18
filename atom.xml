@@ -6,7 +6,7 @@
   <link href="http://jyideng.github.io/atom.xml" rel="self"/>
   
   <link href="http://jyideng.github.io/"/>
-  <updated>2025-03-10T11:37:32.000Z</updated>
+  <updated>2025-03-18T09:24:15.013Z</updated>
   <id>http://jyideng.github.io/</id>
   
   <author>
@@ -17,24 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>🧹 QQ Summary Genius： QQ聊天文字记录AI总结助手</title>
+    <link href="http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/"/>
+    <id>http://jyideng.github.io/2025/03/18/QQ%20Summary%20Genius%20QQ%E8%81%8A%E5%A4%A9%E6%96%87%E5%AD%97%E8%AE%B0%E5%BD%95AI%E6%80%BB%E7%BB%93%E5%8A%A9%E6%89%8B/</id>
+    <published>2025-03-18T08:52:17.000Z</published>
+    <updated>2025-03-18T09:24:15.013Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/JyiDeng/QQ-Summary-Genius&quot;&gt;写了一个新的 QQ 聊天记录AI总结助手！欢迎来 github 使用！（点击我加Star）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;🧹-QQ-Summary-Genius-QQ聊天文字记录AI总结助手&quot;&gt;&lt;a href=&quot;#🧹-QQ-Summary-Genius-QQ聊天文字记录AI总结助手&quot; class=&quot;headerlink&quot; title=&quot;🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手&quot;&gt;&lt;/a&gt;🧹 QQ Summary Genius: QQ聊天文字记录AI总结助手&lt;/h1&gt;&lt;p&gt;QQ Summary Genius ，一个简单而强大的QQ聊天AI总结工具，帮你提炼有价值的讨论内容。&lt;/p&gt;
+&lt;h2 id=&quot;🌟-主要功能&quot;&gt;&lt;a href=&quot;#🌟-主要功能&quot; class=&quot;headerlink&quot; title=&quot;🌟 主要功能&quot;&gt;&lt;/a&gt;🌟 主要功能&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;数据预处理部分&lt;ul&gt;
+&lt;li&gt;📅 根据日期范围筛选内容&lt;/li&gt;
+&lt;li&gt;🗑️ 移除日期时间行、QQ号、昵称等信息&lt;/li&gt;
+&lt;li&gt;🖼️ 移除[图片]标记和其他表情符号&lt;/li&gt;
+&lt;li&gt;⚙️ 移除系统消息和无用重复消息，支持自定义过滤关键词&lt;!-- - 📊 提供详细的处理统计信息 --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AI 总结部分&lt;ul&gt;
+&lt;li&gt;🤖 支持调用多种 AI API（SiliconFlow、OpenAI、Anthropic）进行内容总结&lt;/li&gt;
+&lt;li&gt;📊 生成Markdown格式的总结报告&lt;!-- - ⚡ 使用多线程并行调用多个API提高效率 --&gt;&lt;/li&gt;
+&lt;li&gt;🔑 便捷的 API 密钥、模型、提示词配置系统，支持交互式设置&lt;/li&gt;
+&lt;li&gt;🔒 结果留于本地，安全性高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Widget/Tools 插件/工具" scheme="http://jyideng.github.io/categories/Widget-Tools-%E6%8F%92%E4%BB%B6-%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Python" scheme="http://jyideng.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sunshine🌞小太阳 - Your Desktop Pinned Motto &amp; Pic Widget (Windows)</title>
     <link href="http://jyideng.github.io/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/"/>
     <id>http://jyideng.github.io/2025/03/10/Sunshine%F0%9F%8C%9E%E5%B0%8F%E5%A4%AA%E9%98%B3%20-%20Your%20Desktop%20Pinned%20Motto%20&amp;%20Pic%20(Windows)/</id>
     <published>2025-03-10T11:35:00.000Z</published>
-    <updated>2025-03-10T11:37:32.000Z</updated>
+    <updated>2025-03-18T08:54:22.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/JyiDeng/Sunshine-Your-Desktop-Pinned-Motto-and-Pic-Widget-on-Windows&quot;&gt;写了一个新的 Windows 桌面插件！欢迎来 github</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/JyiDeng/Sunshine-Your-Desktop-Pinned-Motto-and-Pic-Widget-on-Windows&quot;&gt;写了一个新的 Windows 桌面插件！欢迎来 github 使用！（点击我加Star）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🌞&lt;strong&gt;Sunshine 小太阳&lt;/strong&gt; 的灵感来源于作者阴雨天时心情不佳，希望用阳光为用户带来温暖。基于 Windows ， Sunshine 可以展示自定义的格言、图片，可以切换喜欢的主题，运行也非常简单。&lt;/p&gt;
+&lt;p&gt;Sunshine was inspired by the author’s bad mood on rainy days, hoping to bring warmth to users. Based on Windows, Sunshine can display customized mottos and pics, switch favorite themes, and is easy to run.&lt;/p&gt;
+&lt;h2 id=&quot;Features&quot;&gt;&lt;a href=&quot;#Features&quot; class=&quot;headerlink&quot; title=&quot;Features&quot;&gt;&lt;/a&gt;Features&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;📌&lt;strong&gt;Inspirational Display&lt;/strong&gt;: 置顶展示多句提醒自己的格言，并配上一张图片。Presents multiple self - reminding mottos accompanied by an image, all &lt;strong&gt;pinned&lt;/strong&gt; on the top of all windows.&lt;/li&gt;
+&lt;li&gt;🎨&lt;strong&gt;Customizable Settings&lt;/strong&gt;: 可以切换主题、调整窗口大小、设置格言刷新频率等。Allows you to switch themes, adjust the window size, and set the refresh frequency of mottos. &lt;/li&gt;
+&lt;li&gt;☁️&lt;strong&gt;Lightweight Design&lt;/strong&gt;: 特别轻量级。Sunshine is extremely lightweight.&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
-    <category term="Widget 插件" scheme="http://jyideng.github.io/categories/Widget-%E6%8F%92%E4%BB%B6/"/>
+    <category term="Widget/Tools 插件/工具" scheme="http://jyideng.github.io/categories/Widget-Tools-%E6%8F%92%E4%BB%B6-%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Python" scheme="http://jyideng.github.io/tags/Python/"/>
